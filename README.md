@@ -1,9 +1,19 @@
-MDID Documentation
+# MDID Documentation
 ==================
 
-This project will collect installation and administration documentation
-for the MDID project.
+Experimental re-do of the docs with sphinx
 
-The project is based on [Pelican](http://docs.getpelican.com/).
+Clone this repo to a new directory so you don't overwrite the original mdid-docs
 
-In the `docs` directory, modify the content, then run `fab build` to generate the output.
+
+## Setup
+
+1. Clone this repo to a new directory so you don't overwrite the original mdid-docs
+2. Make a new virtualenv, e.g.  ```mkvirtualenv msph``` (if you have virtualenvwrapper) or ```virtualenv msph``` if you don't
+3. ```workon msph```
+4. ```pip install -r requirements.txt```
+5. From the root mdid-docs directory ```sphinx-build -b html source build```
+6. ```open build/index.html```
+
+
+

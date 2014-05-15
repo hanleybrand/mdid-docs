@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>RHEL TLDR; &mdash; MDID Documentation 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="MDID Documentation 3.0 documentation" href="../index.html" />
+    <link rel="next" title="SQL Snippets" href="../administration/SQL_Snippets.html" />
+    <link rel="prev" title="Git Troubles" href="11_git_troubles.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+        <style>
+            a[name] {
+              padding-top: 100px;
+              margin-top: -100px;
+              display: inline-block; /* required for webkit browsers */
+            }
+        </style>
+
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          MDID</a>
+        <span class="navbar-text navbar-version pull-left"><b>3.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Page Menu <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="2_technical_overview.html">Technical Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#webserver">Webserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#database">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#solr-search">Solr Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#memory-object-cache">Memory Object Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#rabbitmq">RabbitMQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_software_installation.html">Software Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_software_installation.html#install-dependencies">Install dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4_python_packages.html">Python Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_python_packages.html#install-python-packages-using-pip">Install python packages using PIP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5_server_setup.html">Server Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_server_setup.html#setup-user-accounts">Setup user accounts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="6_download_and_install.html">Download and Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_download_and_install.html#git-mdid3">Git MDID3!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="7_optional_installs.html">Optional Installs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html#ffmpeg-executable-for-audio-video-file-support">FFMPEG_EXECUTABLE for audio/video file support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html#pdf-support">PDF support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="8_database_setup.html">Database Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_apache_mod_wsgi.html">Apache and MOD_WSGI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html#edit-etc-apache2-httpd-conf">Edit /etc/apache2/httpd.conf:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html#mpm-not-pre-fork-1">MPM not Pre-fork[1]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10_go_and_git.html">Working with git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#get-a-github-account-make-a-repo-or-at-least-make-issues">Get a github account, make a repo - or at least make issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#getting-to-it">Getting to it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#branching-is-best">Branching is best</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#important-note">Important note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#updating-is-easyish">Updating is Easyish</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11_git_troubles.html">Git Troubles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11_git_troubles.html#so-git-is-really-easy-and-won-t-give-me-any-problems">So git is really easy and won&#8217;t give me any problems?</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">RHEL TLDR;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#epel-rpm-repo">EPEL rpm repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git">git</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../administration/SQL_Snippets.html">SQL Snippets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#alphabetical-list-of-collections">Alphabetical list of collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#getting-the-database-id-of-a-specific-user-by-username">Getting the database id of a specific user by username</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#how-many-presentations-does-that-user-have">How many presentations does that user have?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#getting-information-about-records">getting information about records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html">MDID Curation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#how-is-mdid-organized">How is MDID Organized?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#metadata">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#media">Media</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#getting-started-with-mdid">Getting Started with MDID</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#creating-a-new-collection-editing-an-existing-collection">Creating a New Collection &amp; Editing an Existing Collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#modifying-permissions-in-a-collection">Modifying Permissions in a Collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#importing-metadata-records">Importing Metadata (Records)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#additional-options-in-mdid3">Additional Options in MDID3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#related-pages">Related Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#statistics-permissions-and-delete-collection-boxes">Statistics, Permissions, and Delete Collection Boxes</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">RHEL TLDR;</a><ul>
+<li><a class="reference internal" href="#epel-rpm-repo">EPEL rpm repo</a></li>
+<li><a class="reference internal" href="#git">git</a><ul>
+<li><a class="reference internal" href="#if-mysql-is-on-the-same-server">if mysql is on the same server</a></li>
+<li><a class="reference internal" href="#add-alias-for-running-easy-intall-pip-via-python26">add alias for running easy_intall &amp; pip via python26</a></li>
+<li><a class="reference internal" href="#optional-but-do-yourself-a-favor">optional, but do yourself a favor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="11_git_troubles.html" title="Previous Chapter: Git Troubles"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Git Troubles</span>
+    </a>
+  </li>
+  <li>
+    <a href="../administration/SQL_Snippets.html" title="Next Chapter: SQL Snippets"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">SQL Snippets &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<ul id="sourcelink">
+    <li>
+  <a href="../_sources/versal/12_rhel_tldr.txt"
+     rel="nofollow">Sphinx Source</a>
+    </li>
+</ul></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+            <ul>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search MDID Docs" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul><li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Page Menu <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="2_technical_overview.html">Technical Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#webserver">Webserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#database">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#solr-search">Solr Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#memory-object-cache">Memory Object Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#rabbitmq">RabbitMQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_software_installation.html">Software Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_software_installation.html#install-dependencies">Install dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4_python_packages.html">Python Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_python_packages.html#install-python-packages-using-pip">Install python packages using PIP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5_server_setup.html">Server Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_server_setup.html#setup-user-accounts">Setup user accounts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="6_download_and_install.html">Download and Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_download_and_install.html#git-mdid3">Git MDID3!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="7_optional_installs.html">Optional Installs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html#ffmpeg-executable-for-audio-video-file-support">FFMPEG_EXECUTABLE for audio/video file support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html#pdf-support">PDF support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="8_database_setup.html">Database Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_apache_mod_wsgi.html">Apache and MOD_WSGI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html#edit-etc-apache2-httpd-conf">Edit /etc/apache2/httpd.conf:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html#mpm-not-pre-fork-1">MPM not Pre-fork[1]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10_go_and_git.html">Working with git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#get-a-github-account-make-a-repo-or-at-least-make-issues">Get a github account, make a repo - or at least make issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#getting-to-it">Getting to it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#branching-is-best">Branching is best</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#important-note">Important note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#updating-is-easyish">Updating is Easyish</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11_git_troubles.html">Git Troubles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11_git_troubles.html#so-git-is-really-easy-and-won-t-give-me-any-problems">So git is really easy and won&#8217;t give me any problems?</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">RHEL TLDR;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#epel-rpm-repo">EPEL rpm repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git">git</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../administration/SQL_Snippets.html">SQL Snippets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#alphabetical-list-of-collections">Alphabetical list of collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#getting-the-database-id-of-a-specific-user-by-username">Getting the database id of a specific user by username</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#how-many-presentations-does-that-user-have">How many presentations does that user have?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#getting-information-about-records">getting information about records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html">MDID Curation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#how-is-mdid-organized">How is MDID Organized?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#metadata">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#media">Media</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#getting-started-with-mdid">Getting Started with MDID</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#creating-a-new-collection-editing-an-existing-collection">Creating a New Collection &amp; Editing an Existing Collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#modifying-permissions-in-a-collection">Modifying Permissions in a Collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#importing-metadata-records">Importing Metadata (Records)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#additional-options-in-mdid3">Additional Options in MDID3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#related-pages">Related Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#statistics-permissions-and-delete-collection-boxes">Statistics, Permissions, and Delete Collection Boxes</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul><li role="presentation" class="dropdown-header">On this page</li>
+<ul>
+<li><a class="reference internal" href="#">RHEL TLDR;</a><ul>
+<li><a class="reference internal" href="#epel-rpm-repo">EPEL rpm repo</a></li>
+<li><a class="reference internal" href="#git">git</a><ul>
+<li><a class="reference internal" href="#if-mysql-is-on-the-same-server">if mysql is on the same server</a></li>
+<li><a class="reference internal" href="#add-alias-for-running-easy-intall-pip-via-python26">add alias for running easy_intall &amp; pip via python26</a></li>
+<li><a class="reference internal" href="#optional-but-do-yourself-a-favor">optional, but do yourself a favor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul>
+  <li role="presentation" class="dropdown-header">Previous</li>
+  <li>
+    <a href="11_git_troubles.html" title="Previous Chapter: Git Troubles"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Git Troubles</span>
+    </a>
+  </li>
+  <li role="presentation" class="dropdown-header">Next</li>
+  <li>
+    <a href="../administration/SQL_Snippets.html" title="Next Chapter: SQL Snippets"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">SQL Snippets &raquo;</span>
+    </a>
+  </li>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul>
+<ul id="sourcelink">
+    <li>
+  <a href="../_sources/versal/12_rhel_tldr.txt"
+     rel="nofollow">Sphinx Source</a>
+    </li>
+</ul>
+            <li class="divider">&nbsp;</li>
+            </ul>
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  <div class="section" id="rhel-tldr">
+<h1>RHEL TLDR;<a class="headerlink" href="#rhel-tldr" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="epel-rpm-repo">
+<h2>EPEL rpm repo<a class="headerlink" href="#epel-rpm-repo" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>sudo rpm -Uvh http://download.fedora.redhat.com/pub/epel/5/i386/epel-release-5-4.noarch.rpm
+
+rpm -Uvh http://yum.chrislea.com/centos/5/i386/chl-release-5-3.noarch.rpm
+
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CHL
+</pre></div>
+</div>
+</div>
+<div class="section" id="git">
+<h2>git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h2>
+<p><tt class="docutils literal"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">git-core</span></tt></p>
+<div class="highlight-python"><div class="highlight"><pre>sudo yum install python26 python26-devel python26-setuptools java-1.6.0-openjdk  libjpeg-devel unixODBC unixODBC-devel freetds-devel  MySQL-python26 python-ldap python-memcached mod_wsgi gcc-c++ pyodbc
+</pre></div>
+</div>
+<div class="section" id="if-mysql-is-on-the-same-server">
+<h3>if mysql is on the same server<a class="headerlink" href="#if-mysql-is-on-the-same-server" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre>sudo yum install mysql-server -y
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-alias-for-running-easy-intall-pip-via-python26">
+<h3>add alias for running easy_intall &amp; pip via python26<a class="headerlink" href="#add-alias-for-running-easy-intall-pip-via-python26" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre>alias easy26=&#39;sudo python26 /usr/lib/python2.6/site-packages/easy_install.py&#39;
+
+easy26 pip
+</pre></div>
+</div>
+</div>
+<div class="section" id="optional-but-do-yourself-a-favor">
+<h3>optional, but do yourself a favor<a class="headerlink" href="#optional-but-do-yourself-a-favor" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre>pip install virtualenv
+
+sudo mkdir /var/local/virt
+sudo chown mdid:staff virt
+virtualenv-2.6 -v --no-site-packages virt/mdid3
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, MDID Community.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

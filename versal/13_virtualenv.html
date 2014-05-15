@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Python virtualenv &mdash; MDID Documentation 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="MDID Documentation 3.0 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+        <style>
+            a[name] {
+              padding-top: 100px;
+              margin-top: -100px;
+              display: inline-block; /* required for webkit browsers */
+            }
+        </style>
+
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          MDID</a>
+        <span class="navbar-text navbar-version pull-left"><b>3.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Page Menu <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="2_technical_overview.html">Technical Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#webserver">Webserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#database">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#solr-search">Solr Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#memory-object-cache">Memory Object Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#rabbitmq">RabbitMQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_software_installation.html">Software Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_software_installation.html#install-dependencies">Install dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4_python_packages.html">Python Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_python_packages.html#install-python-packages-using-pip">Install python packages using PIP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5_server_setup.html">Server Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_server_setup.html#setup-user-accounts">Setup user accounts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="6_download_and_install.html">Download and Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_download_and_install.html#git-mdid3">Git MDID3!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="7_optional_installs.html">Optional Installs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html#ffmpeg-executable-for-audio-video-file-support">FFMPEG_EXECUTABLE for audio/video file support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html#pdf-support">PDF support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="8_database_setup.html">Database Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_apache_mod_wsgi.html">Apache and MOD_WSGI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html#edit-etc-apache2-httpd-conf">Edit /etc/apache2/httpd.conf:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html#mpm-not-pre-fork-1">MPM not Pre-fork[1]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10_go_and_git.html">Working with git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#get-a-github-account-make-a-repo-or-at-least-make-issues">Get a github account, make a repo - or at least make issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#getting-to-it">Getting to it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#branching-is-best">Branching is best</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#important-note">Important note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#updating-is-easyish">Updating is Easyish</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11_git_troubles.html">Git Troubles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11_git_troubles.html#so-git-is-really-easy-and-won-t-give-me-any-problems">So git is really easy and won&#8217;t give me any problems?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="12_rhel_tldr.html">RHEL TLDR;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#epel-rpm-repo">EPEL rpm repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#git">git</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../administration/SQL_Snippets.html">SQL Snippets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#alphabetical-list-of-collections">Alphabetical list of collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#getting-the-database-id-of-a-specific-user-by-username">Getting the database id of a specific user by username</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#how-many-presentations-does-that-user-have">How many presentations does that user have?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#getting-information-about-records">getting information about records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html">MDID Curation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#how-is-mdid-organized">How is MDID Organized?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#metadata">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#media">Media</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#getting-started-with-mdid">Getting Started with MDID</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#creating-a-new-collection-editing-an-existing-collection">Creating a New Collection &amp; Editing an Existing Collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#modifying-permissions-in-a-collection">Modifying Permissions in a Collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#importing-metadata-records">Importing Metadata (Records)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#additional-options-in-mdid3">Additional Options in MDID3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#related-pages">Related Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#statistics-permissions-and-delete-collection-boxes">Statistics, Permissions, and Delete Collection Boxes</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Python virtualenv</a><ul>
+<li><a class="reference internal" href="#if-you-already-have-a-server">if you already have a server</a></li>
+<li><a class="reference internal" href="#install-virtualenv">Install virtualenv</a></li>
+<li><a class="reference internal" href="#create-a-virtualenv-for-mdid3">Create a virtualenv for mdid3</a><ul>
+<li><a class="reference internal" href="#bash-tip">bash tip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wait-stop-hold-on">WAIT! STOP! HOLD ON!</a><ul>
+<li><a class="reference internal" href="#re-get-your-python-libraries">Re-get your python libraries</a></li>
+<li><a class="reference internal" href="#reconfigure-your-apache-conf-wsgi-script-to-use-the-virtual-env">Reconfigure your apache.conf &amp; wsgi script to use the virtual env</a></li>
+<li><a class="reference internal" href="#id1">if you already have a server</a></li>
+<li><a class="reference internal" href="#id2">Install virtualenv</a></li>
+<li><a class="reference internal" href="#id3">Create a virtualenv for mdid3</a><ul>
+<li><a class="reference internal" href="#id4">bash tip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">WAIT! STOP! HOLD ON!</a><ul>
+<li><a class="reference internal" href="#id6">Re-get your python libraries</a></li>
+<li><a class="reference internal" href="#id7">Reconfigure your apache.conf &amp; wsgi script to use the virtual env</a><ul>
+<li><a class="reference internal" href="#httpd-conf">httpd.conf</a></li>
+<li><a class="reference internal" href="#rooibos-wsgi">rooibos.wsgi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<ul id="sourcelink">
+    <li>
+  <a href="../_sources/versal/13_virtualenv.txt"
+     rel="nofollow">Sphinx Source</a>
+    </li>
+</ul></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+            <ul>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search MDID Docs" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul><li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Page Menu <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="2_technical_overview.html">Technical Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#webserver">Webserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#database">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#solr-search">Solr Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#memory-object-cache">Memory Object Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#rabbitmq">RabbitMQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_software_installation.html">Software Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_software_installation.html#install-dependencies">Install dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4_python_packages.html">Python Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_python_packages.html#install-python-packages-using-pip">Install python packages using PIP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5_server_setup.html">Server Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_server_setup.html#setup-user-accounts">Setup user accounts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="6_download_and_install.html">Download and Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_download_and_install.html#git-mdid3">Git MDID3!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="7_optional_installs.html">Optional Installs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html#ffmpeg-executable-for-audio-video-file-support">FFMPEG_EXECUTABLE for audio/video file support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html#pdf-support">PDF support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="8_database_setup.html">Database Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_apache_mod_wsgi.html">Apache and MOD_WSGI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html#edit-etc-apache2-httpd-conf">Edit /etc/apache2/httpd.conf:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html#mpm-not-pre-fork-1">MPM not Pre-fork[1]</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10_go_and_git.html">Working with git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#get-a-github-account-make-a-repo-or-at-least-make-issues">Get a github account, make a repo - or at least make issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#getting-to-it">Getting to it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#branching-is-best">Branching is best</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#important-note">Important note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#updating-is-easyish">Updating is Easyish</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11_git_troubles.html">Git Troubles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11_git_troubles.html#so-git-is-really-easy-and-won-t-give-me-any-problems">So git is really easy and won&#8217;t give me any problems?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="12_rhel_tldr.html">RHEL TLDR;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#epel-rpm-repo">EPEL rpm repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#git">git</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../administration/SQL_Snippets.html">SQL Snippets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#alphabetical-list-of-collections">Alphabetical list of collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#getting-the-database-id-of-a-specific-user-by-username">Getting the database id of a specific user by username</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#how-many-presentations-does-that-user-have">How many presentations does that user have?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../administration/SQL_Snippets.html#getting-information-about-records">getting information about records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html">MDID Curation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#how-is-mdid-organized">How is MDID Organized?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#metadata">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#media">Media</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#getting-started-with-mdid">Getting Started with MDID</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#creating-a-new-collection-editing-an-existing-collection">Creating a New Collection &amp; Editing an Existing Collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#modifying-permissions-in-a-collection">Modifying Permissions in a Collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#importing-metadata-records">Importing Metadata (Records)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#additional-options-in-mdid3">Additional Options in MDID3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#related-pages">Related Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#statistics-permissions-and-delete-collection-boxes">Statistics, Permissions, and Delete Collection Boxes</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul><li role="presentation" class="dropdown-header">On this page</li>
+<ul>
+<li><a class="reference internal" href="#">Python virtualenv</a><ul>
+<li><a class="reference internal" href="#if-you-already-have-a-server">if you already have a server</a></li>
+<li><a class="reference internal" href="#install-virtualenv">Install virtualenv</a></li>
+<li><a class="reference internal" href="#create-a-virtualenv-for-mdid3">Create a virtualenv for mdid3</a><ul>
+<li><a class="reference internal" href="#bash-tip">bash tip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wait-stop-hold-on">WAIT! STOP! HOLD ON!</a><ul>
+<li><a class="reference internal" href="#re-get-your-python-libraries">Re-get your python libraries</a></li>
+<li><a class="reference internal" href="#reconfigure-your-apache-conf-wsgi-script-to-use-the-virtual-env">Reconfigure your apache.conf &amp; wsgi script to use the virtual env</a></li>
+<li><a class="reference internal" href="#id1">if you already have a server</a></li>
+<li><a class="reference internal" href="#id2">Install virtualenv</a></li>
+<li><a class="reference internal" href="#id3">Create a virtualenv for mdid3</a><ul>
+<li><a class="reference internal" href="#id4">bash tip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">WAIT! STOP! HOLD ON!</a><ul>
+<li><a class="reference internal" href="#id6">Re-get your python libraries</a></li>
+<li><a class="reference internal" href="#id7">Reconfigure your apache.conf &amp; wsgi script to use the virtual env</a><ul>
+<li><a class="reference internal" href="#httpd-conf">httpd.conf</a></li>
+<li><a class="reference internal" href="#rooibos-wsgi">rooibos.wsgi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul>
+<ul id="sourcelink">
+    <li>
+  <a href="../_sources/versal/13_virtualenv.txt"
+     rel="nofollow">Sphinx Source</a>
+    </li>
+</ul>
+            <li class="divider">&nbsp;</li>
+            </ul>
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  <div class="section" id="python-virtualenv">
+<h1>Python virtualenv<a class="headerlink" href="#python-virtualenv" title="Permalink to this headline">¶</a></h1>
+<p>It&#8217;s
+<a class="reference external" href="http://stackoverflow.com/questions/9337149/is-virtualenv-recommended-for-django-production-server">better</a>
+(and frankly super
+<a class="reference external" href="http://code.google.com/p/modwsgi/wiki/VirtualEnvironments">easy</a>) to
+use a virtual environment for your server&#8217;s python stuff. For <a class="reference external" href="https://github.com/hanleybrand/mdid3-sysadmin/">hosting
+mdid3</a>, it carries at
+least these benefits:</p>
+<ol class="arabic simple">
+<li>Allows the mdid-application user (referred to as <tt class="docutils literal"><span class="pre">mdid</span></tt>) to manage
+python without having to use sudo</li>
+<li>Protects your mdid installation from a unwitting system wide upgrade
+to django 1.4 hosing your server</li>
+<li>Removes the need to type python26 in front of everything (rhel 5)</li>
+<li>If needed, you can make multiple virtualenvs to be able to test some
+change</li>
+</ol>
+<p>Here&#8217;s how to set it up - this can be done whether you&#8217;ve already setup
+or not</p>
+<div class="section" id="if-you-already-have-a-server">
+<h2>if you already have a server<a class="headerlink" href="#if-you-already-have-a-server" title="Permalink to this headline">¶</a></h2>
+<p>It&#8217;s not a problem to set up retroactively. Before you begin, install
+yolk:</p>
+<div class="highlight-python"><div class="highlight"><pre>[sudo] easy_install yolk
+</pre></div>
+</div>
+<p>and after that completes, you type</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">yolk</span> <span class="o">-</span><span class="n">l</span>
+</pre></div>
+</div>
+<p>and you should get a list of the libraries you had installed anyway:</p>
+<div class="highlight-python"><div class="highlight"><pre>MySQL-python    - 1.2.3c1      - active
+PIL             - 1.1.7        - active
+Pygments        - 1.4          - active
+Python          - 2.6.5        - active development (/usr/lib/python2.6/lib-dynload)
+Werkzeug        - 0.8.2        - active
+distribute      - 0.6.10       - active
+flickrapi       - 1.2          - active
+pyodbc          - 3.0.3        - active
+python-dateutil - 2.0          - active
+python-ldap     - 2.3.12       - active
+python-memcached - 1.43         - active
+reportlab       - 2.5          - active
+setuptools      - 0.6c11       - active
+virtualenv      - 1.5.1        - active
+wsgiref         - 0.1.2        - active development (/usr/lib/python2.6)
+yolk            - 0.4.3        - active
+</pre></div>
+</div>
+<p>which you can use to make sure you put all of your dependencies in your
+virtualenv. Speaking of virtualenv...</p>
+</div>
+<div class="section" id="install-virtualenv">
+<h2>Install virtualenv<a class="headerlink" href="#install-virtualenv" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>easy_install virtualenv
+</pre></div>
+</div>
+<p><strong>note-if setting up an rhel server, you need to install python26 &amp;
+setuptools first
+(`walkthrough &lt;http://bda.ath.cx/blog/2009/04/08/installing-python-26-in-centos-5-or-rhel5/&gt;`__)
+and use easy_install with python26, i.e.</strong></p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>sudo python26 /usr/lib/python2.6/site-packages/easy_install.py virtualenv
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="create-a-virtualenv-for-mdid3">
+<h2>Create a virtualenv for mdid3<a class="headerlink" href="#create-a-virtualenv-for-mdid3" title="Permalink to this headline">¶</a></h2>
+<p>Once installed, make a directory for storing your virtualenv - if you&#8217;ve
+installed mdid to /var/local/mdid consider putting your virtualenv in
+/var/local/virt to keep things close, but remember to chown/chgrp the
+directory so the user <tt class="docutils literal"><span class="pre">mdid</span></tt> can use it</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo mkdir /var/local/virt
+sudo chown mdid:staff virt
+virtualenv-2.6 -v --no-site-packages virt/mdid3
+</pre></div>
+</div>
+<p>Ok, so now all you have to do is switch to the virtualenv:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">source</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">virt</span><span class="o">/</span><span class="n">mdid3</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+<p>and your terminal prompt should go from <tt class="docutils literal"><span class="pre">$</span></tt> to this: <tt class="docutils literal"><span class="pre">(mdid3)$</span></tt> (if
+your prompt is just <tt class="docutils literal"><span class="pre">$</span></tt>)</p>
+<p>To switch back to your default system python, just type <tt class="docutils literal"><span class="pre">deactivate</span></tt>
+and you&#8217;ll be back to normal.</p>
+<div class="section" id="bash-tip">
+<h3>bash tip<a class="headerlink" href="#bash-tip" title="Permalink to this headline">¶</a></h3>
+<p>Add this to your <tt class="docutils literal"><span class="pre">.bash_profile</span></tt> to activate by typing <tt class="docutils literal"><span class="pre">mdid3</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre>alias mdid3=&#39;source /var/local/virt/mdid3-py26/bin/activate&#39;
+</pre></div>
+</div>
+<p>then type</p>
+<div class="highlight-python"><div class="highlight"><pre>source ~/.bash_profile
+</pre></div>
+</div>
+<p>to activate your new command.</p>
+</div>
+</div>
+</div>
+<div class="section" id="wait-stop-hold-on">
+<h1>WAIT! STOP! HOLD ON!<a class="headerlink" href="#wait-stop-hold-on" title="Permalink to this headline">¶</a></h1>
+<p>Before you activate (just type <tt class="docutils literal"><span class="pre">deactivate</span></tt> if you already did) you
+want to make an install file for re-getting your python libraries:</p>
+<div class="highlight-python"><div class="highlight"><pre>pip freeze &gt; /var/local/virt/mdid3-py26/mdid-dep.txt
+</pre></div>
+</div>
+<p>If you have an already working mdid3 server this will generate a file
+containing something like:</p>
+<div class="highlight-python"><div class="highlight"><pre>MySQL-python==1.2.3c1
+PIL==1.1.7
+Pygments==1.4
+Werkzeug==0.8.2
+distribute==0.6.28
+flickrapi==1.2
+pyodbc==3.0.3
+python-dateutil==2.0
+python-ldap==2.3.12
+python-memcached==1.43
+reportlab==2.5
+virtualenv==1.5.1
+wsgiref==0.1.2
+yolk==0.4.3
+</pre></div>
+</div>
+<p>You can probably delete the <tt class="docutils literal"><span class="pre">virtualenv==1.5.1</span></tt> line, but otherwise
+this should be good.</p>
+<p>Now activate</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">source</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">virt</span><span class="o">/</span><span class="n">mdid3</span><span class="o">-</span><span class="n">py26</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">mdid3</span>
+</pre></div>
+</div>
+<p>(if you listened to my advice about adding the alias to your bash shell)</p>
+<div class="section" id="re-get-your-python-libraries">
+<h2>Re-get your python libraries<a class="headerlink" href="#re-get-your-python-libraries" title="Permalink to this headline">¶</a></h2>
+<p>This is awesome =)</p>
+<ol class="arabic simple">
+<li><tt class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">mdid-dep.txt</span></tt></li>
+<li>Sip coffee</li>
+<li>(optional, not your choice) Curse when you realize it didn&#8217;t work
+<strong>exactly</strong>.</li>
+</ol>
+</div>
+<div class="section" id="reconfigure-your-apache-conf-wsgi-script-to-use-the-virtual-env">
+<h2>Reconfigure your apache.conf &amp; wsgi script to use the virtual env<a class="headerlink" href="#reconfigure-your-apache-conf-wsgi-script-to-use-the-virtual-env" title="Permalink to this headline">¶</a></h2>
+<p>You&#8217;ll need to add something like this to your wsgi script and then
+restart your webserver (safety note: a typo or wrong path will result in
+downtime)</p>
+<p>See
+<a class="reference external" href="http://code.google.com/p/modwsgi/wiki/VirtualEnvironments">http://code.google.com/p/modwsgi/wiki/VirtualEnvironments</a>
+for more information.</p>
+<p>It&#8217;s
+<a class="reference external" href="http://stackoverflow.com/questions/9337149/is-virtualenv-recommended-for-django-production-server">better</a>
+(and frankly super
+<a class="reference external" href="http://code.google.com/p/modwsgi/wiki/VirtualEnvironments">easy</a>) to
+use a virtual environment for your server&#8217;s python stuff. For <a class="reference external" href="https://github.com/hanleybrand/mdid3-sysadmin/">hosting
+mdid3</a>, it carries at
+least these benefits:</p>
+<ol class="arabic simple">
+<li>Allows the mdid-application user (referred to as <tt class="docutils literal"><span class="pre">mdid</span></tt>) to manage
+python without having to use sudo</li>
+<li>Protects your mdid installation from a unwitting system wide upgrade
+to django 1.4 hosing your server</li>
+<li>Removes the need to type python26 in front of everything (rhel 5)</li>
+<li>If needed, you can make multiple virtualenvs to be able to test some
+change</li>
+</ol>
+<p>Here&#8217;s how to set it up - this can be done whether you&#8217;ve already setup
+or not</p>
+</div>
+<div class="section" id="id1">
+<h2>if you already have a server<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>It&#8217;s not a problem to set up retroactively. Before you begin, install
+yolk:</p>
+<div class="highlight-python"><div class="highlight"><pre>[sudo] easy_install yolk
+</pre></div>
+</div>
+<p>and after that completes, you type</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">yolk</span> <span class="o">-</span><span class="n">l</span>
+</pre></div>
+</div>
+<p>and you should get a list of the libraries you had installed anyway:</p>
+<div class="highlight-python"><div class="highlight"><pre>MySQL-python    - 1.2.3c1      - active
+PIL             - 1.1.7        - active
+Pygments        - 1.4          - active
+Python          - 2.6.5        - active development (/usr/lib/python2.6/lib-dynload)
+Werkzeug        - 0.8.2        - active
+distribute      - 0.6.10       - active
+flickrapi       - 1.2          - active
+pyodbc          - 3.0.3        - active
+python-dateutil - 2.0          - active
+python-ldap     - 2.3.12       - active
+python-memcached - 1.43         - active
+reportlab       - 2.5          - active
+setuptools      - 0.6c11       - active
+virtualenv      - 1.5.1        - active
+wsgiref         - 0.1.2        - active development (/usr/lib/python2.6)
+yolk            - 0.4.3        - active
+</pre></div>
+</div>
+<p>which you can use to make sure you put all of your dependencies in your
+virtualenv. Speaking of virtualenv...</p>
+</div>
+<div class="section" id="id2">
+<h2>Install virtualenv<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>easy_install virtualenv
+</pre></div>
+</div>
+<p><strong>note-if setting up an rhel server, you need to install python26 &amp;
+setuptools first
+(`walkthrough &lt;http://bda.ath.cx/blog/2009/04/08/installing-python-26-in-centos-5-or-rhel5/&gt;`__)
+and use easy_install with python26, i.e.</strong></p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>sudo python26 /usr/lib/python2.6/site-packages/easy_install.py virtualenv
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>Create a virtualenv for mdid3<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Once installed, make a directory for storing your virtualenv - if you&#8217;ve
+installed mdid to /var/local/mdid consider putting your virtualenv in
+/var/local/virt to keep things close, but remember to chown/chgrp the
+directory so the user <tt class="docutils literal"><span class="pre">mdid</span></tt> can use it</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo mkdir /var/local/virt
+sudo chown mdid:staff virt
+virtualenv-2.6 -v --no-site-packages virt/mdid3
+</pre></div>
+</div>
+<p>Ok, so now all you have to do is switch to the virtualenv:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">source</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">virt</span><span class="o">/</span><span class="n">mdid3</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+<p>and your terminal prompt should go from <tt class="docutils literal"><span class="pre">$</span></tt> to this: <tt class="docutils literal"><span class="pre">(mdid3)$</span></tt> (if
+your prompt is just <tt class="docutils literal"><span class="pre">$</span></tt>)</p>
+<p>To switch back to your default system python, just type <tt class="docutils literal"><span class="pre">deactivate</span></tt>
+and you&#8217;ll be back to normal.</p>
+<div class="section" id="id4">
+<h3>bash tip<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Add this to your <tt class="docutils literal"><span class="pre">.bash_profile</span></tt> to activate by typing <tt class="docutils literal"><span class="pre">mdid3</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre>alias mdid3=&#39;source /var/local/virt/mdid3-py26/bin/activate&#39;
+</pre></div>
+</div>
+<p>then type</p>
+<div class="highlight-python"><div class="highlight"><pre>source ~/.bash_profile
+</pre></div>
+</div>
+<p>to activate your new command.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h1>WAIT! STOP! HOLD ON!<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h1>
+<p>Before you activate (just type <tt class="docutils literal"><span class="pre">deactivate</span></tt> if you already did) you
+want to make an install file for re-getting your python libraries:</p>
+<div class="highlight-python"><div class="highlight"><pre>pip freeze &gt; /var/local/virt/mdid3-py26/mdid-dep.txt
+</pre></div>
+</div>
+<p>If you have an already working mdid3 server this will generate a file
+containing something like:</p>
+<div class="highlight-python"><div class="highlight"><pre>MySQL-python==1.2.3c1
+PIL==1.1.7
+Pygments==1.4
+Werkzeug==0.8.2
+distribute==0.6.28
+flickrapi==1.2
+pyodbc==3.0.3
+python-dateutil==2.0
+python-ldap==2.3.12
+python-memcached==1.43
+reportlab==2.5
+virtualenv==1.5.1
+wsgiref==0.1.2
+yolk==0.4.3
+</pre></div>
+</div>
+<p>You can probably delete the <tt class="docutils literal"><span class="pre">virtualenv==1.5.1</span></tt> line, but otherwise
+this should be good.</p>
+<p>Now activate</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">source</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">virt</span><span class="o">/</span><span class="n">mdid3</span><span class="o">-</span><span class="n">py26</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">mdid3</span>
+</pre></div>
+</div>
+<p>(if you listened to my advice about adding the alias to your bash shell)</p>
+<div class="section" id="id6">
+<h2>Re-get your python libraries<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>This is awesome =)</p>
+<ol class="arabic simple">
+<li><tt class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">mdid-dep.txt</span></tt></li>
+<li>Sip coffee</li>
+<li>(optional, not your choice) Curse when you realize it didn&#8217;t work
+<strong>exactly</strong>.</li>
+</ol>
+</div>
+<div class="section" id="id7">
+<h2>Reconfigure your apache.conf &amp; wsgi script to use the virtual env<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>You&#8217;ll need to add something like this to your wsgi script and then
+restart your webserver (safety note: a typo or wrong path will result in
+downtime)</p>
+<p>See
+<a class="reference external" href="http://code.google.com/p/modwsgi/wiki/VirtualEnvironments">http://code.google.com/p/modwsgi/wiki/VirtualEnvironments</a>
+for more information.</p>
+<div class="section" id="httpd-conf">
+<h3>httpd.conf<a class="headerlink" href="#httpd-conf" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre>WSGIPythonHome /var/local/virt/mdid3-py26/
+</pre></div>
+</div>
+</div>
+<div class="section" id="rooibos-wsgi">
+<h3>rooibos.wsgi<a class="headerlink" href="#rooibos-wsgi" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">site</span>
+<span class="n">site</span><span class="o">.</span><span class="n">addsitedir</span><span class="p">(</span><span class="s">&#39;/var/local/virt/mdid3-py26/lib/python2.6/site-packages&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, MDID Community.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

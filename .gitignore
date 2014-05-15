@@ -1,7 +1,0 @@
-bin
-lib
-include
-.Python
-*.pyc
-docs/output
-*.komodoproject

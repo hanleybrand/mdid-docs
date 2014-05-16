@@ -1,54 +1,43 @@
+MDID Curation
+=============
+
 .. sectionauthor:: Andreas Knab
 .. publishdate:: 2011-12-09
 .. summary:: A quick overview on how to import metadata and media into MDID3
 
 .. index::
-   single: curation;
-   single: data;
-   single: collections; storage; files; permissions
+   single: curation; data; collections; storage; files; permissions
 
 
+**How is MDID Organized? **
 
-MDID Curation
-=============
+|image0|
 
-How is MDID Organized?
-----------------------
-
-.. image:: mdid-metadata-and-media.png
-
-
-.. rst-class:: lead
-
-Everything in MDID is organized under two main sections: **Metadata**
+| Everything in MDID is organized under two main sections: **Metadata**
 and
-**Media**.
+| **Media**.
 
-Metadata
---------
+**Metadata**
 
--  :term:`Collections`: All :term:`Records`: in MDID are organized within a
+-  **Collections**: All photos in MDID are organizes within a
    collection. Collections can also be organized within a larger
    collection group, if desired.
--  :term:`Records`: hold information about the collections.
+-  **Records**: hold information about the collections.
 
-Media
------
+**Media**
 
--  :term:`Storage`: this is a directory on the server where the files are
+-  **Storage**: this is a directory on the server where the files are
    kept.
--  :term:`Files`: these are media files, for example: audio or video files.
+-  **Files**: these are media files, for example: audio or video files.
    Each media file has one record that corresponds to it. It is
    important to note that files always have to be associated with a
    record. \*\*\*\*
 
------------------
+** *place*\ holder;**
 
-Getting Started with MDID
-=========================
+**Getting Started with MDID**
 
 Creating a New Collection & Editing an Existing Collection
-----------------------------------------------------------
 
 #. First, login to MDID with your username and password.
 #. After you log in, there will be a gray navigation bar above the MDID
@@ -86,7 +75,6 @@ Creating a New Collection & Editing an Existing Collection
    collection and then click **Update** to save your data.
 
 Modifying Permissions in a Collection
--------------------------------------
 
 #. When creating or editing a collection, you also have the option to
    modify **Permissions** for that collection. **Permissions** allow you
@@ -111,7 +99,6 @@ Modifying Permissions in a Collection
    example, they have the ability to change permissions for others.
 
 Importing Metadata (Records)
-----------------------------
 
 #. The Metadata that you wish to upload should already be created in an
    Excel spreadsheet. The spreadsheet will be very simple:
@@ -120,16 +107,16 @@ Importing Metadata (Records)
 
 \_ \_
 
-\_\_The first row contains headings for the individual data fields.
+| \_\_The first row contains headings for the individual data fields.
 The two
-*required *\ fields are **Identifier **\ (which needs to match the
+| *required *\ fields are **Identifier **\ (which needs to match the
 file name) and
-**Title**. Other fields can be added as needed. Once the spreadsheet
+| **Title**. Other fields can be added as needed. Once the spreadsheet
 is
-created, save it as a CSV (Comma Separated Value) file by selecting
-**File>Save As** and choosing \*\*CSV (\*.csv)** from the **\ Save as
+| created, save it as a CSV (Comma Separated Value) file by selecting
+| **File>Save As** and choosing \*\*CSV (\*.csv)** from the **\ Save as
 type\*\*
-dropdown menu.
+| dropdown menu.
 
 #. In MDID, go to **Management** and click on the **Import Data** link.
 #. Select the **Browse** button and locate the CSV file on your
@@ -195,17 +182,15 @@ Import Media Files
 #. Finally, click the **Select and Upload Files** button and choose the
    media files to upload from your computer.
 
-    .. warning:: do not navigate away from this page until the upload is complete
+**Note: do not navigate away from this page until the upload is
+complete**
 
 #. (Permissions available in storage as well – i.e. faculty get high res
    videos; students get low res videos - coming soon).
 
-
-Additional Options in MDID3
-===========================
+**Additional Options in MDID3**
 
 Related Pages
--------------
 
 #. Within the **Manage Collections**, if you select a specific
    collection, you have several additional options available to you
@@ -221,7 +206,6 @@ Related Pages
    to find records without media.
 
 Statistics, Permissions, and Delete Collection Boxes
-----------------------------------------------------
 
 #. The next box, located directly below **Related Pages**, is the
    **Statistics** section. This section simply shows you how many
@@ -235,7 +219,9 @@ Statistics, Permissions, and Delete Collection Boxes
 
 Advanced: Streaming Video (coming soon)
 
-
+ *place*\ holder;
 
 \_\_republished from https://sites.jmu.edu/mdidhelp/532
 
+.. |image0| image:: http://sites.jmu.edu/mdidhelp/files/2011/12/mdid-metadata-and-%20media.png
+   :target: http://sites.jmu.edu/mdidhelp/files/2011/12/mdid-metadata-and-%20media.png

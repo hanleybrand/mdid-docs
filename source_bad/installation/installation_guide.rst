@@ -1,18 +1,12 @@
-Installation Guide
-==================
+| Title: Installation Guide
+| Tags: installation, windows, iis, linux, apache
+| Author: Peter Hanley
+| Date: 2014-04-25
+| Summary: An overview of the MDID3 installation process
 
-.. sectionauthor:: Peter Hanley
-.. publishdate:: 2014-04-25
-.. summary:: An overview of the MDID3 installation process
+Introduction
+============
 
-.. index::
-    single: installation
-    single: windows
-    single: iis
-    single: linux
-    single: apache
-
-.. warning::
     **Note**: This page is a work in progress - ask on the list if a
     step doesn't make sense
 

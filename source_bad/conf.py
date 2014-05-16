@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # MDID Documentation documentation build configuration file, created by
-# sphinx-quickstart on Wed May 14 09:18:35 2014.
+# sphinx-quickstart on Mon May  5 22:44:34 2014.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -14,6 +14,9 @@
 
 import sys
 import os
+import sphinx_bootstrap_theme
+import alabaster
+import sphinx_rtd_theme
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -32,20 +35,20 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx.ext.todo',
-    'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode',
+    'sphinxcontrib.recentpages',
     'sphinx-prompt',
-    #'sphinxcontrib.fulltoc',
+    'sphinxcontrib.fulltoc',
+    #'alabaster',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
-# The suffix of source filenames.
+# The suffix of source_bad filenames.
 source_suffix = '.rst'
 
-# The encoding of source files.
+# The encoding of source_bad files.
 #source_encoding = 'utf-8-sig'
 
 # The master toctree document.
@@ -53,7 +56,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'MDID Documentation'
-copyright = u'2014, MDID Community'
+copyright = u'2014, Andreas Knab, Peter Hanley'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -74,8 +77,8 @@ release = '3.0'
 # Else, today_fmt is used as the format for a strftime call.
 #today_fmt = '%B %d, %Y'
 
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
+# List of patterns, relative to source_bad directory, that match files and
+# directories to ignore when looking for source_bad files.
 exclude_patterns = []
 
 # The reST default role (used for this markup: `text`) to use for all
@@ -102,13 +105,35 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
-import sphinx_bootstrap_theme
 
+# -- Options for HTML output ----------------------------------------------
+
+# The theme to use for HTML and HTML Help pages.  See the documentation for
+# a list of builtin themes.
+# html_theme = 'default'
+
+
+#html_theme = "sphinx_rtd_theme"
+#html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+
+#
+#html_theme_path = [alabaster.get_path()]
+## extensions = ['alabaster']
+#html_theme = 'alabaster'
+#html_sidebars = {
+#   '**': [
+#       'about.html', 'navigation.html', 'searchbox.html', 'donate.html',
+#   ]
+#}
+
+
+
+###README -  http://ryan-roemer.github.io/sphinx-bootstrap-theme/README.html
 html_theme = 'bootstrap'
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 html_theme_options = {
     'navbar_title': "MDID", # Navigation bar title. (Default: ``project`` value)
-    'navbar_site_name': "Page Menu", # Tab name for entire site. (Default: "Site")
+    'navbar_site_name': "MDID Docs", # Tab name for entire site. (Default: "Site")
     #'navbar_links': [
     #    ("Examples", "examples"),
     #    ("Link", "http://example.com", True),
@@ -119,17 +144,78 @@ html_theme_options = {
     'globaltoc_includehidden': "true",
     #'navbar_class': "navbar navbar-inverse",
     'navbar_class': "navbar", # For black navbar, do "navbar navbar-inverse"
-    'navbar_fixed_top': "false",
+    'navbar_fixed_top': "true",
     'source_link_position': "nav",  # Options are "nav" (default), "footer" or anything else to exclude.
     'bootswatch_theme': "flatly",
     'bootstrap_version': "3",
 }
 
-# -- Options for HTML output ----------------------------------------------
-
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#html_theme = 'default'
+#html_theme = 'bootstrap'
+#html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+#
+## Theme options are theme-specific and customize the look and feel of a
+## theme further.
+#html_theme_options = {
+#    # Navigation bar title. (Default: ``project`` value)
+#    'navbar_title': "MDID",
+#
+#    # Tab name for entire site. (Default: "Site")
+#    'navbar_site_name': "MDID Docs",
+#
+#    # A list of tuples containing pages or urls to link to.
+#    # Valid tuples should be in the following forms:
+#    #    (name, page)                 # a link to a page
+#    #    (name, "/aa/bb", 1)          # a link to an arbitrary relative url
+#    #    (name, "http://example.com", True) # arbitrary absolute url
+#    # Note the "1" or "True" value above as the third argument to indicate
+#    # an arbitrary url.
+#    #'navbar_links': [
+#    #    ("Examples", "examples"),
+#    #    ("Link", "http://example.com", True),
+#    #],
+#
+#    # Render the next and previous page links in navbar. (Default: true)
+#    'navbar_sidebarrel': True,
+#
+#    # Render the current pages TOC in the navbar. (Default: true)
+#    'navbar_pagenav': True,
+#
+#    # Global TOC depth for "site" navbar tab. (Default: 1)
+#    # Switching to -1 shows all levels.
+#    'globaltoc_depth': 2,
+#
+#    # Include hidden TOCs in Site navbar?
+#    #
+#    # Note: If this is "false", you cannot have mixed ``:hidden:`` and
+#    # non-hidden ``toctree`` directives in the same page, or else the build
+#    # will break.
+#    #
+#    # Values: "true" (default) or "false"
+#    'globaltoc_includehidden': "true",
+#
+#    # HTML navbar class (Default: "navbar") to attach to <div> element.
+#    # For black navbar, do "navbar navbar-inverse"
+#    #'navbar_class': "navbar navbar-inverse",
+#    'navbar_class': "navbar",
+#
+#    # Fix navigation bar to top of page?
+#    # Values: "true" (default) or "false"
+#    'navbar_fixed_top': "true",
+#
+#    # Location of link to source_bad.
+#    # Options are "nav" (default), "footer" or anything else to exclude.
+#    'source_link_position': "nav",
+#
+#    # Bootswatch (http://bootswatch.com/) theme.
+#    #
+#    # Options are nothing with "" (default) or the name of a valid theme
+#    # such as "amelia" or "cosmo".
+#    'bootswatch_theme': "flatly",
+#
+#    # Choose Bootstrap version.
+#    # Values: "3" (default) or "2" (in quotes)
+#    'bootstrap_version': "3",
+#}
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -175,14 +261,6 @@ html_static_path = ['_static']
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
-#html_sidebars = {'**': ['localtoc.html', 'sourcelink.html', 'searchbox.html']}
-
-html_sidebars = {
-    '**': ['searchbox.html', 'globaltoc.html', 'localtoc.html',
-           'fullname_relations.html'],
-   # 'index': [],
-}
-
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
@@ -232,11 +310,11 @@ latex_elements = {
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title,
+# (source_bad start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('index', 'MDIDDocumentation.tex', u'MDID Documentation Documentation',
-   u'MDID Community', 'manual'),
+   u'Andreas Knab, Peter Hanley', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -263,10 +341,10 @@ latex_documents = [
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
-# (source start file, name, description, authors, manual section).
+# (source_bad start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'mdiddocumentation', u'MDID Documentation Documentation',
-     [u'MDID Community'], 1)
+     [u'Andreas Knab, Peter Hanley'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -276,11 +354,11 @@ man_pages = [
 # -- Options for Texinfo output -------------------------------------------
 
 # Grouping the document tree into Texinfo files. List of tuples
-# (source start file, target name, title, author,
+# (source_bad start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'MDIDDocumentation', u'MDID Documentation Documentation',
-   u'MDID Community', 'MDIDDocumentation', 'One line description of project.',
+   u'Andreas Knab, Peter Hanley', 'MDIDDocumentation', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -295,3 +373,73 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+
+# -- Options for Epub output ----------------------------------------------
+
+# Bibliographic Dublin Core info.
+epub_title = u'MDID Documentation'
+epub_author = u'Andreas Knab, Peter Hanley'
+epub_publisher = u'Andreas Knab, Peter Hanley'
+epub_copyright = u'2014, Andreas Knab, Peter Hanley'
+
+# The basename for the epub file. It defaults to the project name.
+#epub_basename = u'MDID Documentation'
+
+# The HTML theme for the epub output. Since the default themes are not optimized
+# for small screen space, using the same theme for HTML and epub output is
+# usually not wise. This defaults to 'epub', a theme designed to save visual
+# space.
+#epub_theme = 'epub'
+
+# The language of the text. It defaults to the language option
+# or en if the language is not set.
+#epub_language = ''
+
+# The scheme of the identifier. Typical schemes are ISBN or URL.
+#epub_scheme = ''
+
+# The unique identifier of the text. This can be a ISBN number
+# or the project homepage.
+#epub_identifier = ''
+
+# A unique identification for the text.
+#epub_uid = ''
+
+# A tuple containing the cover image and cover page html template filenames.
+#epub_cover = ()
+
+# A sequence of (type, uri, title) tuples for the guide element of content.opf.
+#epub_guide = ()
+
+# HTML files that should be inserted before the pages created by sphinx.
+# The format is a list of tuples containing the path and title.
+#epub_pre_files = []
+
+# HTML files shat should be inserted after the pages created by sphinx.
+# The format is a list of tuples containing the path and title.
+#epub_post_files = []
+
+# A list of files that should not be packed into the epub file.
+epub_exclude_files = ['search.html']
+
+# The depth of the table of contents in toc.ncx.
+#epub_tocdepth = 3
+
+# Allow duplicate toc entries.
+#epub_tocdup = True
+
+# Choose between 'default' and 'includehidden'.
+#epub_tocscope = 'default'
+
+# Fix unsupported image types using the PIL.
+#epub_fix_images = False
+
+# Scale large images.
+#epub_max_image_width = 0
+
+# How to display URL addresses: 'footnote', 'no', or 'inline'.
+#epub_show_urls = 'inline'
+
+# If false, no index is generated.
+#epub_use_index = True

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Software Installation &mdash; MDID Documentation 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="MDID Documentation 3.0 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+        <style>
+            a[name] {
+              padding-top: 100px;
+              margin-top: -100px;
+              display: inline-block; /* required for webkit browsers */
+            }
+        </style>
+
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          MDID</a>
+        <span class="navbar-text navbar-version pull-left"><b>3.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Page Menu <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="simple">
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Software Installation</a><ul>
+<li><a class="reference internal" href="#install-dependencies">Install dependencies</a><ul>
+<li><a class="reference internal" href="#management-systems">Management systems</a><ul>
+<li><a class="reference internal" href="#ubuntu">Ubuntu</a></li>
+<li><a class="reference internal" href="#redhat-packages">Redhat Packages</a></li>
+<li><a class="reference internal" href="#mac-os-x-homebrews">Mac OS X homebrews</a></li>
+<li><a class="reference internal" href="#windows-installers">Windows Installers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<ul id="sourcelink">
+    <li>
+  <a href="../_sources/admin_guide/3_software_installation.txt"
+     rel="nofollow">Sphinx Source</a>
+    </li>
+</ul></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+            <ul>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search MDID Docs" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul><li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Page Menu <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="simple">
+</ul>
+</ul>
+</li>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul><li role="presentation" class="dropdown-header">On this page</li>
+<ul>
+<li><a class="reference internal" href="#">Software Installation</a><ul>
+<li><a class="reference internal" href="#install-dependencies">Install dependencies</a><ul>
+<li><a class="reference internal" href="#management-systems">Management systems</a><ul>
+<li><a class="reference internal" href="#ubuntu">Ubuntu</a></li>
+<li><a class="reference internal" href="#redhat-packages">Redhat Packages</a></li>
+<li><a class="reference internal" href="#mac-os-x-homebrews">Mac OS X homebrews</a></li>
+<li><a class="reference internal" href="#windows-installers">Windows Installers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul>
+<ul id="sourcelink">
+    <li>
+  <a href="../_sources/admin_guide/3_software_installation.txt"
+     rel="nofollow">Sphinx Source</a>
+    </li>
+</ul>
+            <li class="divider">&nbsp;</li>
+            </ul>
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  <div class="section" id="software-installation">
+<h1>Software Installation<a class="headerlink" href="#software-installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="install-dependencies">
+<h2>Install dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="management-systems">
+<h3>Management systems<a class="headerlink" href="#management-systems" title="Permalink to this headline">¶</a></h3>
+<p class="lead">To install the software dependencies required for mdid3 to run, use the
+system-specific methods listed below. Feedback and alternative
+procedures are welcome, please feel free to submit them.</p>
+<hr class="docutils" />
+<p><strong>Package Management System/Command</strong></p>
+<table width="100%" class="table table-bordered">
+<tbody class="table-striped table-hover">
+<th width="25%" >Ubuntu</th>
+<th width="25%" >Red Hat</th>
+<th width="25%" >Mac OS X</th>
+<th width="25%" >Windows 2008 or other</th>
+
+<tr>
+<td >
+<a href="https://help.ubuntu.com/community/AptGet/Howto">apt-get</a> </td>
+<td >Redhat - <a href="http://www.ibm.com/developerworks/linux/library/l-lpic1-v3-102-5/">yum</a> <a href="https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Linux/5/html/Deployment_Guide/c1-yum.html">rhel 5</a> | <a href="https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-yum.html">rhel 6</a> </td>
+<td > <a href="http://mxcl.github.com/homebrew/">homebrew</a>, .pkg installers, source</td>
+<td >None (true? any dissent?).<br>Download installers or executables.</td>
+</tr>
+</tbody></table><table width="100%" class="table table-bordered">
+<tbody class="table-striped table-hover">
+<tr>
+<td width="16%" >&nbsp;</td>
+<th width="21%">Ubuntu</th>
+<th width="21%">Red Hat</th>
+<th width="21%">Mac OS X</th>
+<th width="21%">Windows 2008 or other</th>
+</tr>
+<tr></tr>
+<tr>
+<th>python</th>
+<td >installed</td>
+<td ><pre><code>python26</code></pre></td>
+<td ><a href="http://mac.github.com">installed</a></td>
+<td >Python 2.7.3 <br>(<a href="http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi">32-bit</a>) | (<a href="http://www.python.org/ftp/python/2.7.3/python-2.7.3.amd64.msi">64-bit</a>)</td>
+</tr>
+<tr><th>git</th>
+<td ><pre><code>git-core</code></pre></td>
+<td ><pre><code>git-core</code></pre></td>
+<td ><a href="http://mac.github.com">Github for Mac</a></td>
+<td ><a href="http://windows.github.com">Github for Windows</a></td>
+
+</tr>
+</tbody>
+</table><p>Below is a matrix of the software dependencies required for mdid3 to run
+correctly. In general, software installed via a package manager like apt
+or yum will be displayed as <tt class="docutils literal"><span class="pre">package-name</span></tt> whereas a downloadable
+installer, binary or downloadable source will be a <a class="reference external" href="#">text link</a></p>
+<p>Apt and Yum generally need to be run via sudo, but the Mac OS X package
+manager homebrew is designed specifically to <strong>not</strong> use sudo (assumedly
+because the normative mac user account has installation privileges). So
+to install the software package <tt class="file docutils literal"><span class="pre">packageX</span></tt>, use the commands:</p>
+<dl class="glossary docutils">
+<dt id="term-apt-get-ubuntu">apt-get (Ubuntu)</dt>
+<dd><div class="first"><pre class="highlight"><style type="text/css" scoped>span.prompt:before {
+  content: "$ ";
+}
+</style><span class="prompt">sudo apt-get install packageX</span>
+</pre></div></dd>
+<dt id="term-yum-red-hat">yum (Red Hat)</dt>
+<dd><div class="first"><pre class="highlight"><style type="text/css" scoped>span.prompt:before {
+  content: "$ ";
+}
+</style><span class="prompt">sudo yum install packageX</span>
+</pre></div></dd>
+<dt id="term-homebrew-mac-os-x">homebrew (Mac OS X)</dt>
+<dd><div class="first"><pre class="highlight"><style type="text/css" scoped>span.prompt:before {
+  content: "$ ";
+}
+</style><span class="prompt">brew install packageX</span>
+</pre></div></dd>
+</dl>
+<p>Optionally, package managers can be given a list of packages, and be
+told to say &#8220;yes&#8221; to every question, and the human being installing the
+software can do something important, like drink coffee. A
+copy/paste-able single command will be presented at the bottom of the
+matrix.</p>
+<hr class="docutils" />
+<div class="section" id="ubuntu">
+<h4>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h4>
+<pre class="highlight"><style type="text/css" scoped>span.prompt:before {
+  content: "$ ";
+}
+</style><span class="prompt">sudo apt-get -y upgrade <span class="o">&amp;&amp;</span> install</span>
+</pre><pre class="highlight"><style type="text/css" scoped>span.prompt:before {
+  content: "$ ";
+}
+</style><span class="prompt">sudo apt-get  -y install openjdk-6-jre-headless python-setuptools libjpeg62-dev unixodbc unixodbc-dev freetds-dev tdsodbc python-dev libmysqlclient16-dev  python-ldap python-memcache memcached libapache2-mod-wsgi g++ mysql-server</span>
+</pre></div>
+<div class="section" id="redhat-packages">
+<h4>Redhat Packages<a class="headerlink" href="#redhat-packages" title="Permalink to this headline">¶</a></h4>
+<p>TBD</p>
+</div>
+<div class="section" id="mac-os-x-homebrews">
+<h4>Mac OS X homebrews<a class="headerlink" href="#mac-os-x-homebrews" title="Permalink to this headline">¶</a></h4>
+<p>TBD</p>
+</div>
+<div class="section" id="windows-installers">
+<h4>Windows Installers<a class="headerlink" href="#windows-installers" title="Permalink to this headline">¶</a></h4>
+<p>TBD</p>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, MDID Community.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

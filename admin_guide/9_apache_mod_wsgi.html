@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Apache and MOD_WSGI &mdash; MDID Documentation 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="MDID Documentation 3.0 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+        <style>
+            a[name] {
+              padding-top: 100px;
+              margin-top: -100px;
+              display: inline-block; /* required for webkit browsers */
+            }
+        </style>
+
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          MDID</a>
+        <span class="navbar-text navbar-version pull-left"><b>3.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Page Menu <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="simple">
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Apache and MOD_WSGI</a><ul>
+<li><a class="reference internal" href="#edit-etc-apache2-httpd-conf">Edit /etc/apache2/httpd.conf:</a></li>
+<li><a class="reference internal" href="#mpm-not-pre-fork-1">MPM not Pre-fork[1]</a><ul>
+<li><a class="reference internal" href="#rhel-centos-5-x-fedora-13">RHEL / CentOS 5.x / Fedora 13</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<ul id="sourcelink">
+    <li>
+  <a href="../_sources/admin_guide/9_apache_mod_wsgi.txt"
+     rel="nofollow">Sphinx Source</a>
+    </li>
+</ul></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+            <ul>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search MDID Docs" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul><li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Page Menu <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="simple">
+</ul>
+</ul>
+</li>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul><li role="presentation" class="dropdown-header">On this page</li>
+<ul>
+<li><a class="reference internal" href="#">Apache and MOD_WSGI</a><ul>
+<li><a class="reference internal" href="#edit-etc-apache2-httpd-conf">Edit /etc/apache2/httpd.conf:</a></li>
+<li><a class="reference internal" href="#mpm-not-pre-fork-1">MPM not Pre-fork[1]</a><ul>
+<li><a class="reference internal" href="#rhel-centos-5-x-fedora-13">RHEL / CentOS 5.x / Fedora 13</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul>
+<ul id="sourcelink">
+    <li>
+  <a href="../_sources/admin_guide/9_apache_mod_wsgi.txt"
+     rel="nofollow">Sphinx Source</a>
+    </li>
+</ul>
+            <li class="divider">&nbsp;</li>
+            </ul>
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  <div class="section" id="apache-and-mod-wsgi">
+<h1>Apache and MOD_WSGI<a class="headerlink" href="#apache-and-mod-wsgi" title="Permalink to this headline">¶</a></h1>
+<p>The developers of django recommend using a seperate webserver for static
+files on a production system. See How to use Django with Apache and
+mod_wsgi for more information</p>
+<div class="section" id="edit-etc-apache2-httpd-conf">
+<h2>Edit /etc/apache2/httpd.conf:<a class="headerlink" href="#edit-etc-apache2-httpd-conf" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>sudo cp /var/local/mdid/dist/linux/httpd.conf /etc/apache2/httpd.conf
+</pre></div>
+</div>
+<p>and add this line (changing <strong>[/path/to/mdid3_root]</strong> to your correct
+local path)</p>
+<div class="highlight-python"><div class="highlight"><pre>WSGIScriptAlias / [/path/to/mdid3_root]/rooibos/dist/linux/django.wsgi
+
+| *note*: the lone forward slash is not a typo - the first “/”
+indicates
+| that mdid will be the root o TRUNCATED! Please download pandoc if
+you
+| want to convert large files.
+</pre></div>
+</div>
+<ul class="simple">
+<li><a href="#id1"><span class="problematic" id="id2">**</span></a></li>
+<li><a href="#id3"><span class="problematic" id="id4">**</span></a></li>
+<li><a href="#id5"><span class="problematic" id="id6">**</span></a></li>
+</ul>
+</div>
+<div class="section" id="mpm-not-pre-fork-1">
+<h2>MPM not Pre-fork[1]<a class="headerlink" href="#mpm-not-pre-fork-1" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>&#8220;The worker MPM uses multiple child processes with many threads
+each. Each thread handles one connection at a time. Worker generally
+is a good choice for high-traffic servers because it has a smaller
+memory footprint than the prefork MPM.&#8221; - <a class="reference external" href="1">Switching Apache from
+Prefork to Worker MPM in RHEL / CentOS 5.x / Fedora 13</a></div></blockquote>
+<div class="section" id="rhel-centos-5-x-fedora-13">
+<h3>RHEL / CentOS 5.x / Fedora 13<a class="headerlink" href="#rhel-centos-5-x-fedora-13" title="Permalink to this headline">¶</a></h3>
+<p>Modify <tt class="docutils literal"><span class="pre">/etc/sysconfig/httpd</span></tt> so that the following line is
+<strong>uncommented</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>HTTPD=/usr/sbin/httpd.worker
+</pre></div>
+</div>
+<p>Apache must be restarted after that, either via</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apachectl restart
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apachectl stop
+sudo apachectl start
+</pre></div>
+</div>
+<p>confirm via $ /usr/sbin/apachectl -V</p>
+<blockquote>
+<div><p>Server version: Apache/2.2.3</p>
+<p>Architecture: 32-bit</p>
+<div class="highlight-python"><div class="highlight"><pre>Server MPM:     Worker
+</pre></div>
+</div>
+<p>threaded: yes (fixed thread count)</p>
+<p>forked: yes (variable process count)</p>
+<p>Server compiled with....</p>
+<p>-D APACHE_MPM_DIR=&#8221;server/mpm/worker&#8221;</p>
+</div></blockquote>
+<p>..etc...</p>
+<hr class="docutils" />
+<p><a class="reference external" href="http://www.jqueryin.com/2010/08/07/switching-apache-prefork-to-worker-mpm-in-rhel-centos-5x-fedora-13">1</a></p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, MDID Community.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

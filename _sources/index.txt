@@ -37,8 +37,38 @@ MDID3.
 .. Contents:
 
 .. toctree::
-   :maxdepth: 1
-   :hidden:
+    :maxdepth: 1
+    :includehidden:
+
+    admin_guide/2_technical_overview
+
+    admin_guide/3_software_installation
+
+    admin_guide/4_python_packages
+
+    admin_guide/5_server_setup
+
+    admin_guide/6_download_and_install
+
+    admin_guide/7_optional_installs
+
+    admin_guide/8_database_setup
+
+    admin_guide/9_apache_mod_wsgi
+
+    administration/SQL\_Snippets
+
+    curation/MDID_Curation
+
+    curation/fields\_and\_fieldsets
+
+    admin_guide/10_go_and_git
+
+    admin_guide/11_git_troubles
+
+    admin_guide/12_rhel_tldr
+
+    admin_guide/13_virtualenv
 
 
 Installation
@@ -111,5 +141,3 @@ Indices and tables
 * :ref:`search`
 
 -------------
-
-Last Updated: |today|

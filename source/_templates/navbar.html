@@ -14,7 +14,7 @@
           {%- endblock %}
           {% if theme_navbar_title -%}{{ theme_navbar_title|e }}{%- else -%}{{ project|e }}{%- endif -%}
         </a>
-        <span class="navbar-text navbar-version pull-left"><b>{{ version|e }}</b></span>
+
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -31,21 +31,18 @@
                 {% include "navbartoc.html" %}
               {% endif %}
             {% endblock %}
-            {% if theme_navbar_sidebarrel %}
-              {% block sidebarrel %}
-                {% include "relations.html" %}
-              {% endblock %}
-            {% endif %}
+
             {% block navbarextra %}
             {% endblock %}
-            <!--{% if theme_source_link_position == "nav" %}-->
-              <!--<li class="hidden-sm">{% include "sourcelink.html" %}</li>-->
-            <!--{% endif %}-->
           </ul>
+             {% if theme_navbar_sidebarrel %}
+              {% block sidebarrel %}
+                <ul class="nav navbar-nav navbar-right">
+                    {% include "relations.html" %}
+               </ul>
+              {% endblock %}
+            {% endif %}
 
-          {% block navbarsearch %}
-            {% include "navbarsearchbox.html" %}
-          {% endblock %}
         </div>
     </div>
   </div>

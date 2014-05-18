@@ -1,3 +1,10 @@
+Python virtualenv
+=================
+
+
+.. note:: This page needs review and likely revision
+
+
 It's
 `better <http://stackoverflow.com/questions/9337149/is-virtualenv-recommended-for-django-production-server>`__
 (and frankly super
@@ -31,26 +38,26 @@ and after that completes, you type
 
 ::
 
-    yolk -l 
+    yolk -l
 
 and you should get a list of the libraries you had installed anyway:
 
 ::
 
-    MySQL-python    - 1.2.3c1      - active 
-    PIL             - 1.1.7        - active 
-    Pygments        - 1.4          - active 
+    MySQL-python    - 1.2.3c1      - active
+    PIL             - 1.1.7        - active
+    Pygments        - 1.4          - active
     Python          - 2.6.5        - active development (/usr/lib/python2.6/lib-dynload)
-    Werkzeug        - 0.8.2        - active 
-    distribute      - 0.6.10       - active 
-    flickrapi       - 1.2          - active 
-    pyodbc          - 3.0.3        - active 
-    python-dateutil - 2.0          - active 
-    python-ldap     - 2.3.12       - active 
-    python-memcached - 1.43         - active 
-    reportlab       - 2.5          - active 
-    setuptools      - 0.6c11       - active 
-    virtualenv      - 1.5.1        - active 
+    Werkzeug        - 0.8.2        - active
+    distribute      - 0.6.10       - active
+    flickrapi       - 1.2          - active
+    pyodbc          - 3.0.3        - active
+    python-dateutil - 2.0          - active
+    python-ldap     - 2.3.12       - active
+    python-memcached - 1.43         - active
+    reportlab       - 2.5          - active
+    setuptools      - 0.6c11       - active
+    virtualenv      - 1.5.1        - active
     wsgiref         - 0.1.2        - active development (/usr/lib/python2.6)
     yolk            - 0.4.3        - active
 
@@ -117,7 +124,7 @@ then type
 to activate your new command.
 
 WAIT! STOP! HOLD ON!
-====================
+--------------------
 
 Before you activate (just type ``deactivate`` if you already did) you
 want to make an install file for re-getting your python libraries:
@@ -217,26 +224,26 @@ and after that completes, you type
 
 ::
 
-    yolk -l 
+    yolk -l
 
 and you should get a list of the libraries you had installed anyway:
 
 ::
 
-    MySQL-python    - 1.2.3c1      - active 
-    PIL             - 1.1.7        - active 
-    Pygments        - 1.4          - active 
+    MySQL-python    - 1.2.3c1      - active
+    PIL             - 1.1.7        - active
+    Pygments        - 1.4          - active
     Python          - 2.6.5        - active development (/usr/lib/python2.6/lib-dynload)
-    Werkzeug        - 0.8.2        - active 
-    distribute      - 0.6.10       - active 
-    flickrapi       - 1.2          - active 
-    pyodbc          - 3.0.3        - active 
-    python-dateutil - 2.0          - active 
-    python-ldap     - 2.3.12       - active 
-    python-memcached - 1.43         - active 
-    reportlab       - 2.5          - active 
-    setuptools      - 0.6c11       - active 
-    virtualenv      - 1.5.1        - active 
+    Werkzeug        - 0.8.2        - active
+    distribute      - 0.6.10       - active
+    flickrapi       - 1.2          - active
+    pyodbc          - 3.0.3        - active
+    python-dateutil - 2.0          - active
+    python-ldap     - 2.3.12       - active
+    python-memcached - 1.43         - active
+    reportlab       - 2.5          - active
+    setuptools      - 0.6c11       - active
+    virtualenv      - 1.5.1        - active
     wsgiref         - 0.1.2        - active development (/usr/lib/python2.6)
     yolk            - 0.4.3        - active
 

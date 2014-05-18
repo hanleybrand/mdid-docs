@@ -108,7 +108,7 @@ html_theme = 'bootstrap'
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 html_theme_options = {
     'navbar_title': "MDID", # Navigation bar title. (Default: ``project`` value)
-    'navbar_site_name': "Page Menu", # Tab name for entire site. (Default: "Site")
+    'navbar_site_name': "Chapters &amp; Pages", # Tab name for entire site. (Default: "Site")
     #'navbar_links': [
     #    ("Examples", "examples"),
     #    ("Link", "http://example.com", True),
@@ -117,8 +117,8 @@ html_theme_options = {
     'navbar_pagenav': True,
     'globaltoc_depth': 2,
     'globaltoc_includehidden': "true",
-    #'navbar_class': "navbar navbar-inverse",
-    'navbar_class': "navbar", # For black navbar, do "navbar navbar-inverse"
+    'navbar_class': "navbar navbar-inverse",
+    #'navbar_class': "navbar", # For black navbar, do "navbar navbar-inverse"
     'navbar_fixed_top': "false",
     'source_link_position': "nav",  # Options are "nav" (default), "footer" or anything else to exclude.
     'bootswatch_theme': "flatly",
@@ -153,7 +153,7 @@ html_theme_options = {
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-#html_favicon = None
+html_favicon = 'favicon.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -215,7 +215,7 @@ html_sidebars = {
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'MDIDDocumentationdoc'
+htmlhelp_basename = 'MDID_Documentation'
 
 
 # -- Options for LaTeX output ---------------------------------------------

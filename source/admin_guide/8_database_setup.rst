@@ -16,7 +16,6 @@ MySQL
 -----
 
 
-
 Create a text file called :file:`mdid.sql`
 
 .. prompt::

@@ -8,7 +8,7 @@ Install dependencies
 ********************
 
 
-Management systems
+Package Management systems
 =====================================
 
 .. rst-class:: lead

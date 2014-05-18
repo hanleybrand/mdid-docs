@@ -3,13 +3,31 @@
 
 Experimental re-do of the docs with sphinx - I think it works pretty well.
 
-It's probably easiest to clone this repo to a new directory so you don't overwrite the original mdid-docs.
-
 #### Advantages
 
 * doc-centric structure (even if the TOCtree construct can be frustrating if you want it to do anything but list all the pages)
 
 * automatic index & easy glossary
+
+
+#### Cons
+
+* It might be fair to say it's over-engineered for the purposes of documenting MDID.
+
+
+### Some good sphinx resources
+
+[openalea sphinx cheat sheet](http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#text-syntax-bold-italic-verbatim-and-special-characters)
+
+[publish sphinx output to gh pages](http://datadesk.latimes.com/posts/2012/01/sphinx-on-github/)
+
+[cheatsheet at http://thomas-cokelaer.info](http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html)
+
+
+
+### Specific Sphinx extensions in use
+
+[spinx-prompt] (https://github.com/sbrunner/sphinx-prompt)
 
 
 ## Setup

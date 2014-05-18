@@ -1,33 +1,36 @@
 
 
+.. raw:: html
 
+    <div class="jumbotron">
 
+MDID 3
+======
 
-================================
-Madison Digital Imaging Database
-================================
+.. compound::
+.. rst-class::   lead
 
-.. rst-class::  jumbotron lead
+    The Madison Digital Image Database is a digital media management system
+    with sophisticated tools for discovering, aggregating, and presenting
+    digital media in a wide variety of learning spaces. 
 
-The Madison Digital Image Database is a digital media management system
-with sophisticated tools for discovering, aggregating, and presenting
-digital media in a wide variety of learning spaces. 
-|
-|MDID is a freely distributed, open source web application developed at James Madison University.
+    MDID is a freely distributed, open source web application developed at James Madison University.
 
-.. rst-class::  lead
+.. raw:: html
 
--  MDID3 Website: `http://mdid.org <http://mdid.org>`__
--  Official Repository:
-   `https://github.com/cit-jmu/rooibos/ <https://github.com/cit-jmu/rooibos/>`__
--  MDID3 Mailing List:
-   `https://listserv.jmu.edu/cgi-bin/wa?SUBED1=mdidusers-l&A=1 <https://listserv.jmu.edu/cgi-bin/wa?SUBED1=mdidusers-l&amp;A=1>`__
-
-.. rst-class::  lead
-
-Please join the list and introduce yourself if you end up working with
-MDID3.
-
+    <hr>
+    <div class="row">
+        <div class="col-sm-6 col-md-4 text-success">
+        <span class="glyphicon glyphicon-info-sign"></span> <a href="https://github.com/cit-jmu/rooibos/"  target="_blank">JMU MDID3 Website</a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <span class="glyphicon glyphicon-save  text-success"></span> <a href="https://github.com/cit-jmu/rooibos/"   target="_blank">Official Github Repository</a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <span class="glyphicon glyphicon-comment text-success"></span> <a href="https://github.com/cit-jmu/rooibos/"  target="_blank">MDID Mailing List</a>
+        </div>
+    </div>
+    </div></div>
 
 -------------
 
@@ -37,21 +40,7 @@ MDID3.
     :maxdepth: 1
     :hidden:
 
-    admin_guide/2_technical_overview
-
-    admin_guide/3_software_installation
-
-    admin_guide/4_python_packages
-
-    admin_guide/5_server_setup
-
-    admin_guide/6_download_and_install
-
-    admin_guide/7_optional_installs
-
-    admin_guide/8_database_setup
-
-    admin_guide/9_apache_mod_wsgi
+    admin_guide/index
 
     administration/SQL\_Snippets
 
@@ -68,11 +57,19 @@ MDID3.
     admin_guide/13_virtualenv
 
 
-Installation
-------------
+
+.. raw:: html
+
+    <div class="row" id="row1" style="background: hsla(300,100%,50%,0.02)" >
+
+    <!-- <div class="col-xs-12 col-sm-6 col-md-8"  style="hsla(10,100%,50%,0.05)"> -->
+
+.. rst-class::  col-xs-12 col-sm-12 col-md-6
+
+Installation Guide
+==================
 
 .. rst-class::  lead
-
 :doc:`admin_guide/2_technical_overview`
 
 .. rst-class::  lead
@@ -104,8 +101,19 @@ Installation
 :doc:`admin_guide/9_apache_mod_wsgi`
 
 
-Installation Appendices
-#######################
+.. raw:: html
+
+    </div>
+
+.. rst-class::  col-xs-12 col-sm-12 col-md-6
+
+Other Topics
+############
+
+Server Administration
+---------------------
+
+:doc:`administration/SQL\_Snippets`
 
 :doc:`admin_guide/10_go_and_git`
 
@@ -115,13 +123,6 @@ Installation Appendices
 
 :doc:`admin_guide/13_virtualenv`
 
-
-Server Administration
----------------------
-
-:doc:`administration/SQL\_Snippets`
-
-
 Curation
 --------
 
@@ -130,11 +131,19 @@ Curation
 :doc:`curation/fields\_and\_fieldsets`
 
 
-
 Indices and tables
-==================
+------------------
 
-* :ref:`genindex`
-* :ref:`search`
+    * :ref:`genindex`
+    * :ref:`search`
 
--------------
+
+.. raw:: html
+
+    </div></div>
+
+
+
+
+
+

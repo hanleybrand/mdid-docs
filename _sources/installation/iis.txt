@@ -1,15 +1,20 @@
-| Title: IIS configuration
-| Tags: installation, windows, iis
-| Author: Andreas Knab
-| Date: 2014-01-23
-| Summary: IIS configuration on Windows
+.. sectionauthor:: Andreas Knab
+.. publishdate:: 2014-01-23
+.. summary:: IIS configuration on Windows
+
+.. index::
+   single: installation
+   single: windows
+   single: iis
+
+IIS configuration
+=================
 
 Mime Types
 ----------
 
-| To support Adobe Air applications, the following mime type needs to be
-added
-| to the IIS configuration:
+To support Adobe Air applications, the following mime type needs to be
+added to the IIS configuration:
 
 ::
 

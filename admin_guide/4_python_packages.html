@@ -29,7 +29,9 @@
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="top" title="MDID Documentation 3.0 documentation" href="../index.html" />
+    <link rel="up" title="Installation Guide" href="index.html" />
     <link rel="next" title="Server Setup" href="5_server_setup.html" />
     <link rel="prev" title="Software Installation" href="3_software_installation.html" />
 <meta charset='utf-8'>
@@ -50,7 +52,8 @@
   </head>
   <body>
 
-  <div id="navbar" class="navbar navbar-default ">
+ <!-- navbar.html -->
+  <div id="navbar" class="navbar navbar-inverse navbar-default ">
     <div class="container">
       <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -61,7 +64,7 @@
         </button>
         <a class="navbar-brand" href="../index.html">
           MDID</a>
-        <span class="navbar-text navbar-version pull-left"><b>3.0</b></span>
+
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -74,55 +77,24 @@
      id="dLabelGlobalToc"
      data-toggle="dropdown"
      data-target="#"
-     href="../index.html">Page Menu <b class="caret"></b></a>
+     href="../index.html">Chapters &amp; Pages <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="2_technical_overview.html">Technical Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#webserver">Webserver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#database">Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#solr-search">Solr Search</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#memory-object-cache">Memory Object Cache</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#rabbitmq">RabbitMQ</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="3_software_installation.html">Software Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3_software_installation.html#install-dependencies">Install dependencies</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Python Packages</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#install-python-packages-using-pip">Install python packages using PIP</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="5_server_setup.html">Server Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="5_server_setup.html#setup-user-accounts">Setup user accounts</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="6_download_and_install.html">Download and Install</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="6_download_and_install.html#git-mdid3">Git MDID3!</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="7_optional_installs.html">Optional Installs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html#ffmpeg-executable-for-audio-video-file-support">FFMPEG_EXECUTABLE for audio/video file support</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html#pdf-support">PDF support</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="8_database_setup.html">Database Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9_apache_mod_wsgi.html">Apache and MOD_WSGI</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html#edit-etc-apache2-httpd-conf">Edit /etc/apache2/httpd.conf:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html#mpm-not-pre-fork-1">MPM not Pre-fork[1]</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Installation Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html">Technical Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_software_installation.html">Software Installation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Python Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_server_setup.html">Server Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_download_and_install.html">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html">Optional Installs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_database_setup.html">Database Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html">Apache and MOD_WSGI</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html">MDID Curation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#how-is-mdid-organized">How is MDID Organized?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#metadata">Metadata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#media">Media</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#getting-started-with-mdid">Getting Started with MDID</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#creating-a-new-collection-editing-an-existing-collection">Creating a New Collection &amp; Editing an Existing Collection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#modifying-permissions-in-a-collection">Modifying Permissions in a Collection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#importing-metadata-records">Importing Metadata (Records)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#getting-started-with-mdid">Getting Started with MDID</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#additional-options-in-mdid3">Additional Options in MDID3</a><ul>
@@ -145,25 +117,14 @@
 <li class="toctree-l1"><a class="reference internal" href="12_rhel_tldr.html">RHEL TLDR;</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#epel-rpm-repo">EPEL rpm repo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#git">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#yum-yum">yum yum</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="13_virtualenv.html">Python virtualenv</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#if-you-already-have-a-server">if you already have a server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_virtualenv.html">Python and the Virtual Environment</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#install-virtualenv">Install virtualenv</a></li>
 <li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#create-a-virtualenv-for-mdid3">Create a virtualenv for mdid3</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="13_virtualenv.html#wait-stop-hold-on">WAIT! STOP! HOLD ON!</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#re-get-your-python-libraries">Re-get your python libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#reconfigure-your-apache-conf-wsgi-script-to-use-the-virtual-env">Reconfigure your apache.conf &amp; wsgi script to use the virtual env</a></li>
-<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#id1">if you already have a server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#id2">Install virtualenv</a></li>
-<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#id3">Create a virtualenv for mdid3</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="13_virtualenv.html#id5">WAIT! STOP! HOLD ON!</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#id6">Re-get your python libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#id7">Reconfigure your apache.conf &amp; wsgi script to use the virtual env</a></li>
 </ul>
 </li>
 </ul>
@@ -195,46 +156,30 @@
 </li>
               
             
-            
-              
-                
-  <li>
-    <a href="3_software_installation.html" title="Previous Chapter: Software Installation"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Software Install...</span>
-    </a>
-  </li>
-  <li>
-    <a href="5_server_setup.html" title="Next Chapter: Server Setup"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Server Setup &raquo;</span>
-    </a>
-  </li>
-              
-            
-            
-            
-            <!---->
-              <!--<li class="hidden-sm"><!---->
-<!--<ul id="sourcelink">-->
-    <!--<li>-->
-  <!--<a href="../_sources/admin_guide/4_python_packages.txt"-->
-     <!--rel="nofollow">Sphinx Source</a>-->
-    <!--</li>-->
-<!--</ul>-->
-<!----></li>-->
-            <!---->
-          </ul>
 
-          
             
-<form class="navbar-form navbar-right" action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
+            
+          </ul>
+             
+              
+                <ul class="nav navbar-nav navbar-right">
+                    
+  <li>
+    <a href="3_software_installation.html" title="Previous Chapter: Software Installation"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Previous - Software Installation</span>
+    </a>
+  </li>
+  <li>
+    <a href="5_server_setup.html" title="Next Chapter: Server Setup"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Next - Server Setup &raquo;</span>
+    </a>
+  </li>
+               </ul>
+              
+            
+
         </div>
     </div>
   </div>
+ <!-- end navbar.html -->
 
 <div class="container">
   <div class="row">
@@ -255,55 +200,24 @@
      id="dLabelGlobalToc"
      data-toggle="dropdown"
      data-target="#"
-     href="../index.html">Page Menu <b class="caret"></b></a>
+     href="../index.html">Chapters &amp; Pages <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="2_technical_overview.html">Technical Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#webserver">Webserver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#database">Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#solr-search">Solr Search</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#memory-object-cache">Memory Object Cache</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html#rabbitmq">RabbitMQ</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="3_software_installation.html">Software Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3_software_installation.html#install-dependencies">Install dependencies</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Python Packages</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#install-python-packages-using-pip">Install python packages using PIP</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="5_server_setup.html">Server Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="5_server_setup.html#setup-user-accounts">Setup user accounts</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="6_download_and_install.html">Download and Install</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="6_download_and_install.html#git-mdid3">Git MDID3!</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="7_optional_installs.html">Optional Installs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html#ffmpeg-executable-for-audio-video-file-support">FFMPEG_EXECUTABLE for audio/video file support</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html#pdf-support">PDF support</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="8_database_setup.html">Database Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9_apache_mod_wsgi.html">Apache and MOD_WSGI</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html#edit-etc-apache2-httpd-conf">Edit /etc/apache2/httpd.conf:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html#mpm-not-pre-fork-1">MPM not Pre-fork[1]</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Installation Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html">Technical Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_software_installation.html">Software Installation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Python Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_server_setup.html">Server Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_download_and_install.html">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html">Optional Installs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_database_setup.html">Database Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html">Apache and MOD_WSGI</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html">MDID Curation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#how-is-mdid-organized">How is MDID Organized?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#metadata">Metadata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#media">Media</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#getting-started-with-mdid">Getting Started with MDID</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#creating-a-new-collection-editing-an-existing-collection">Creating a New Collection &amp; Editing an Existing Collection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#modifying-permissions-in-a-collection">Modifying Permissions in a Collection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#importing-metadata-records">Importing Metadata (Records)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#getting-started-with-mdid">Getting Started with MDID</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#additional-options-in-mdid3">Additional Options in MDID3</a><ul>
@@ -326,25 +240,14 @@
 <li class="toctree-l1"><a class="reference internal" href="12_rhel_tldr.html">RHEL TLDR;</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#epel-rpm-repo">EPEL rpm repo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#git">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#yum-yum">yum yum</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="13_virtualenv.html">Python virtualenv</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#if-you-already-have-a-server">if you already have a server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_virtualenv.html">Python and the Virtual Environment</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#install-virtualenv">Install virtualenv</a></li>
 <li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#create-a-virtualenv-for-mdid3">Create a virtualenv for mdid3</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="13_virtualenv.html#wait-stop-hold-on">WAIT! STOP! HOLD ON!</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#re-get-your-python-libraries">Re-get your python libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#reconfigure-your-apache-conf-wsgi-script-to-use-the-virtual-env">Reconfigure your apache.conf &amp; wsgi script to use the virtual env</a></li>
-<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#id1">if you already have a server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#id2">Install virtualenv</a></li>
-<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#id3">Create a virtualenv for mdid3</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="13_virtualenv.html#id5">WAIT! STOP! HOLD ON!</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#id6">Re-get your python libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#id7">Reconfigure your apache.conf &amp; wsgi script to use the virtual env</a></li>
 </ul>
 </li>
 </ul>

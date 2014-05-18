@@ -25,7 +25,7 @@ and
 **Media**.
 
 Metadata
---------
+########
 
 -  :term:`Collections`: All :term:`Records`: in MDID are organized within a
    collection. Collections can also be organized within a larger
@@ -33,7 +33,7 @@ Metadata
 -  :term:`Records`: hold information about the collections.
 
 Media
------
+#####
 
 -  :term:`Storage`: this is a directory on the server where the files are
    kept.
@@ -45,48 +45,47 @@ Media
 -----------------
 
 Getting Started with MDID
-=========================
+-------------------------
 
 Creating a New Collection & Editing an Existing Collection
-----------------------------------------------------------
+##########################################################
 
 #. First, login to MDID with your username and password.
 #. After you log in, there will be a gray navigation bar above the MDID
-   homepage. Click on the **Management **\ option in the navigation bar.
-#. On the next page, click on the **Manage Collections** link to begin
+   homepage. Click on the :menuselection:`Management` option in the navigation bar.
+#. On the next page, click on the :menuselection:`Manage Collections` link to begin
    creating or editing a collection.
 #. Before you begin to create a new collection, let’s take a quick look
    at how MDID organizes your collections. Collections are organized in
    alphabetical order by their title. Other basic information about the
    collection is located next to the Collection title. Under the
-   **Hidden **\ column, you can see whether or not the collection is
-   available to students. The next column, entitled **Records**,
+   :guilabel:`Hidden` column, you can see whether or not the collection is
+   available to students. The next column, entitled :guilabel:`Records`,
    displays how many records are associated with that collection. In
    MDID3, users have the option to create larger collection groups. The
-   **Children** column shows all the collections that are available
+   :guilabel:`Children` column shows all the collections that are available
    within a specific collection group.
-#. Click on the **Create a New Collection** link on the top of the page.
-#. On this page, enter a **Title** for the collection and select whether
+#. Click on the :menuselection:`Create a New Collection` link on the top of the page.
+#. On this page, enter a :guilabel:`Title` for the collection and select whether
    or not to hide the collection. Enter a description for the collection
-   in the **Description** field. Scroll down to the **Children
-   **\ option. In MDID3, users have the option to create larger
+   in the :guilabel:`Description` field. Scroll down to the :guilabel:`Children`
+   option. In MDID3, users have the option to create larger
    collection groups. You can create a collection group by selecting
-   **Children** to add to the collection. This ensures that your
+   :guilabel:`Children`  to add to the collection. This ensures that your
    collection group will house these specific collections. If you do not
-   wish to create a collection group, then simply ignore the **Children
-   **\ option.
-#. Finally, click the **Create** button to finish creating your
+   wish to create a collection group, then simply ignore the :guilabel:`Children`  option.
+#. Finally, click the :menuselection:`Create` button to finish creating your
    collection.
 #. To edit a collection after you have created it, follow these steps:
    First, select\*\* Management\*\* in the gray navigation bar.
-#. Next, select the **Manage Collections** link.
+#. Next, select the menuselection:`Manage Collections` link.
 #. On the next page, choose which collection you would like to edit and
    click on the **Title** of that collection.
 #. On the **Edit Collection **\ page, make any necessary changes to the
    collection and then click **Update** to save your data.
 
 Modifying Permissions in a Collection
--------------------------------------
+#####################################
 
 #. When creating or editing a collection, you also have the option to
    modify **Permissions** for that collection. **Permissions** allow you
@@ -111,25 +110,20 @@ Modifying Permissions in a Collection
    example, they have the ability to change permissions for others.
 
 Importing Metadata (Records)
-----------------------------
+############################
 
 #. The Metadata that you wish to upload should already be created in an
    Excel spreadsheet. The spreadsheet will be very simple:
 
 *(coming soon)*
 
-\_ \_
 
-\_\_The first row contains headings for the individual data fields.
-The two
-*required *\ fields are **Identifier **\ (which needs to match the
-file name) and
-**Title**. Other fields can be added as needed. Once the spreadsheet
-is
-created, save it as a CSV (Comma Separated Value) file by selecting
-**File>Save As** and choosing \*\*CSV (\*.csv)** from the **\ Save as
-type\*\*
-dropdown menu.
+The first row contains headings for the individual data fields.
+The two *required * fields are **Identifier ** (which needs to match the
+file name) and **Title**. Other fields can be added as needed. Once the spreadsheet
+is created, save it as a CSV (Comma Separated Value) file by selecting
+:menuselection:`File --> Save As` and choosing \*\*CSV (\*.csv)** from the **\ Save as
+type\*\* dropdown menu.
 
 #. In MDID, go to **Management** and click on the **Import Data** link.
 #. Select the **Browse** button and locate the CSV file on your

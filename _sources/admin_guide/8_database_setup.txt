@@ -2,9 +2,24 @@
 Database Setup
 ==============
 
+Microsoft SQL Server
+--------------------
+
+   - Create a new database and user account
+   - Make the user account owner of the new database
+   - If you want to run unit tests using SQL Server, give the account the *dbcreator* server role.
+
+
+
+
+MySQL
+-----
+
+
 Create a text file called :file:`mdid.sql`
 
-.. code-block:: sql
+.. prompt::
+
     nano mdid.sql
 
 and type this text in

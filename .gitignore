@@ -5,3 +5,12 @@ include
 *.pyc
 docs/output
 *.komodoproject
+.idea
+.idea/*
+build
+build/*
+md_docs
+md_docs/*
+*.md
+
+
